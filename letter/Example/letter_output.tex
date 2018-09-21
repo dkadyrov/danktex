@@ -1,0 +1,68 @@
+\documentclass{letter}
+\usepackage{geometry}
+\geometry{
+	paper=letterpaper, % Change to letterpaper for US letter
+	top=1.5in, % Top margin
+	bottom=1.5in, % Bottom margin
+	left=1in, % Left margin
+	right=1in, % Right margin
+}
+\usepackage{hyperref}
+
+\signature{Name\\Title\\Futher Contact Information}
+
+\date{\today}
+
+\usepackage{lmodern}
+\usepackage{mdframed}
+\definecolor{blockquote-border}{RGB}{221,221,221}
+\definecolor{blockquote-text}{RGB}{119,119,119}
+\newmdenv[rightline=false,bottomline=false,topline=false,linewidth=2pt,linecolor=blockquote-border,skipabove=\parskip]{customblockquote}
+\renewenvironment{quote}{\vspace{6pt plus 2pt minus 1pt}\begin{customblockquote}\fontfamily{lmtt}\selectfont\list{}{\rightmargin=0.75em\leftmargin=0em}%
+\item\relax\color{blockquote-text}\ignorespaces}{\unskip\unskip\endlist\end{customblockquote}}
+
+\begin{document}
+\begin{letter}{Name\\Address\\Second Address\\City, State Zip-Code}
+
+
+\begin{flushright}
+Name\\Address\\Second Address\\City, State Zip-Code
+\end{flushright}
+
+\opening{To whom it may concern,}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis
+dolor vitae tristique eleifend. Quisque non ipsum sit amet velit
+malesuada consectetur. Praesent vel facilisis leo. Sed facilisis varius
+orci, ut aliquam lorem malesuada in. Morbi nec purus at nisi fringilla
+varius non ut dui. Pellentesque bibendum sapien velit. Nulla purus
+justo, congue eget enim a, elementum sollicitudin eros. Cras porta augue
+ligula, vel adipiscing odio ullamcorper eu. In tincidunt nisi sit amet
+tincidunt tincidunt. Maecenas elementum neque eget dolor
+\href{http://example.com}{egestas fringilla}:
+
+\begin{quote}
+Nullam eget dapibus quam, sit amet sagittis magna. Nam tincidunt, orci
+ac imperdiet ultricies, neque metus ultrices quam, id gravida augue
+lacus ac leo.
+
+\begin{quote}
+Test
+\end{quote}
+\end{quote}
+
+Vestibulum id sodales lectus, sed scelerisque quam. Nullam auctor mi et
+feugiat commodo. Duis interdum imperdiet nulla, vitae bibendum eros
+placerat non. Cras ornare, risus in faucibus malesuada, libero sem
+fringilla quam, ut luctus enim sapien eget dolor.
+
+\closing{Sincerely,}
+
+\vfill
+
+\encl{Enclosure 1\\Enclosure 2}
+\cc{Recipient 1\\Recipient 2}
+\ps{PS Lorem ipsum dolor sit amet, \emph{consectetur} adipiscing elit.}
+
+\end{letter}
+\end{document}
