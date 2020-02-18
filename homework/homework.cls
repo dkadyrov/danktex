@@ -68,7 +68,7 @@
 \newcommand{\ClassSection}[1]{\gdef\ClassSection{#1}}
 \newcommand{\Instructor}[1]{\gdef\Instructor{#1}}
 \newcommand{\Author}[1]{\gdef\Author{#1}}
-
+\newcommand{\AuthorID}[1]{\gdef\AuthorID{#1}}
 %
 % Title Page
 %
@@ -87,7 +87,8 @@
     \ClassNumber$-$\ClassSection \\
     \Instructor \\
     \vspace{4mm}
-    \Author
+    \Author\\
+    \AuthorID
     \end{center}
     \vspace{4mm}
 }
