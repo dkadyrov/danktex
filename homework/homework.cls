@@ -18,6 +18,8 @@
 \RequirePackage{textcomp}
 
 \RequirePackage{courier}
+\RequirePackage[bookmarks,hypertexnames=false,debug]{hyperref}
+\RequirePackage{bookmark}
 
 \RequirePackage{listings}
 \lstset{
@@ -39,18 +41,66 @@
     breaklines=true,
 }
 
+% \RequirePackage{placeins}
+% \RequirePackage{environ}
+% \RequirePackage{xifthen}
+% % Redefine these if you want to change the language
+% \newcommand{\problemlabel}{Problem}
+% \newcommand{\solutionlabel}{Solution}
+
+
+% % Set up counters for problems and subproblems
+% \newcounter{ProblemNum}
+% \newcounter{SubProblemNum}[ProblemNum]
+% \renewcommand{\theProblemNum}{\arabic{ProblemNum}}
+% \renewcommand{\theSubProblemNum}{\alph{SubProblemNum}}
+
+
+% % The problem environment is the base unit of content for this class.
+% \newcommand{\subsectiontitle}{}                                                                                                                                  
+% \newenvironment{problem}[1]%
+% {
+%     \stepcounter{ProblemNum}
+%     \renewcommand{\subsectiontitle}{\problemlabel \ \theProblemNum \ifthenelse{\isempty{#1}}{}{\ : #1}}
+%     \medskip \subsection*{\subsectiontitle}
+%     \FloatBarrier
+
+%     \phantomsection
+%     \addcontentsline{toc}{section}{\subsectiontitle}
+% }
+% {
+%   \FloatBarrier
+% }
+
+
+% % The subproblem command divides a problem into parts a), b), c), ...
+% \newcommand*{\subproblem}{%
+%     \stepcounter{SubProblemNum}%
+%     {\bf \theSubProblemNum)\hspace{2pt}}
+% }
+
+
+% % The solution environment should be used within the problem environment
+% \NewEnviron{solution}{
+%     \setcounter{SubProblemNum}{0}
+%     \FloatBarrier
+%     \subsubsection*{\solutionlabel}
+%     \BODY
+% }
+
+
+
 \newenvironment{problem}[1][]{
+    \phantomsection
+    \addcontentsline{toc}{section}{Problem #1}
     \textbf{Problem #1}\\
-    \linebreak
-    % \vspace{2mm}
 }{
     \vspace{4mm}
 }
 
 \newenvironment{solution}{
-    \textbf{Solution} \\
+    \textbf{Solution}
     \linebreak
-    % \vspace{2mm}
 }{
     \vspace{4mm}
 }
@@ -69,6 +119,7 @@
 \newcommand{\Instructor}[1]{\gdef\Instructor{#1}}
 \newcommand{\Author}[1]{\gdef\Author{#1}}
 \newcommand{\AuthorID}[1]{\gdef\AuthorID{#1}}
+\newcommand{\School}[1]{\gdef\School{#1}}
 %
 % Title Page
 %
@@ -78,19 +129,21 @@
 \renewcommand{\maketitle}{%
     \thispagestyle{empty}
     \begin{center}
-    \Large
-    \Title \\
-    \vspace{4mm}
-    \large
-    Due on \DueDate \\
-    \ClassName \\ 
-    \ClassNumber$-$\ClassSection \\
-    \Instructor \\
-    \vspace{4mm}
-    \Author\\
-    \AuthorID
+        \Large
+        \Title \\
+        \vspace{4mm}
+        \large
+        Due on \DueDate \\
+        \ClassName \\ 
+        % \ClassNumber$-$\ClassSection \\
+        \Instructor \\
+        \School \\
+        \vspace{4mm}
+        \Author\\
+        \vspace{4mm}
     \end{center}
-    \vspace{4mm}
 }
 
 \RequirePackage{csquotes}
+\RequirePackage{hyperref}
+\RequirePackage{caption}
