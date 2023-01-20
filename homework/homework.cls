@@ -98,6 +98,15 @@
     \vspace{4mm}
 }
 
+\newenvironment{part}[1][]{
+    \phantomsection
+    \addcontentsline{toc}{subsection}{Part #1}
+    \textbf{Part #1}\\
+}{
+    \vspace{4mm}
+}
+
+
 \newenvironment{solution}{
     \textbf{Solution}
     \linebreak
@@ -135,7 +144,7 @@
         \large
         Due on \DueDate \\
         \ClassName \\ 
-        % \ClassNumber$-$\ClassSection \\
+        \ClassNumber$-$\ClassSection \\
         \Instructor \\
         \School \\
         \vspace{4mm}
