@@ -1,0 +1,115 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage{geometry}
+\geometry{
+	paper=letterpaper, % Change to letterpaper for US letter
+	top=1.5in, % Top margin
+	bottom=1.5in, % Bottom margin
+	left=0.85in, % Left margin
+	right=0.85in, % Right margin
+}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+
+\titleformat{\subsection}{
+  \vspace{-4pt}\bf\raggedright
+}{}{0em}{}[\color{black} \vspace{-3pt}]
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=0em,before=\item[]}
+% itemsep=1pt,topsep=1pt,before=\item[]}
+
+
+\begin{document}
+
+\centerline{\Large\bfseries Name}
+
+\vspace{0.5em}
+
+\centerline{\href{mailto: Email}{Email} {\large\textperiodcentered} \href{Website}{Website} {\large\textperiodcentered} \href{tel:Phone Number}{Phone Number} \ {\Large}}
+
+% \vspace{0.5em/}
+
+\section{Skills}\label{skills}
+
+\begin{description}
+\item[Programming Languages]
+Language List
+\item[Software Applications]
+Software Packages
+\item[Foreign Languages]
+Language List
+\end{description}
+
+\section{Education}\label{education}
+
+\subsection{School, Location of School}\label{school-location-of-school}
+
+\begin{description}
+\item[Advanced Degree]
+Field - Month Year
+\item[Degree]
+Field - Month Year
+\end{description}
+
+\section{Work Experience}\label{work-experience}
+
+\subsection{Sub-Company Name, Company Name - City,
+State}\label{sub-company-name-company-name---city-state}
+
+\emph{Position Title (Start Date - Present)}
+
+\begin{itemize}
+\item
+  First Point
+\item
+  Second Point
+\end{itemize}
+
+\subsection{Company Name - City, State}\label{company-name---city-state}
+
+\emph{Position Title (Start Date - End Date)}
+
+\subsection{Company Name - City,
+State}\label{company-name---city-state-1}
+
+\emph{Position Title (Start Date - End Date)}
+
+\section{Projects}\label{projects}
+
+\subsection{Project 1}\label{project-1}
+
+\begin{itemize}
+\item
+  First Point
+\item
+  Second Point
+\end{itemize}
+
+\subsection{Project 2}\label{project-2}
+
+% \section{Education}
+% \subsection{Binghamton University}
+% \begin{itemize}
+% \item MS Mechanical Engineering (Acoustics and Dynamic Systems) \\
+% \item BS Mechanical Engineering
+% \end{itemize}
+% \section{Employment Experience}
+% \subsection{Thornton Tomasetti}
+
+\end{document}

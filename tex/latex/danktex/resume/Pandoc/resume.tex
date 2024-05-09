@@ -1,0 +1,46 @@
+\documentclass[$if(fontsize)$$fontsize$$else$10pt$endif$,letterpaper]{article}
+\usepackage{geometry}
+\geometry{
+	paper=letterpaper, % Change to letterpaper for US letter
+	top=1.5in, % Top margin
+	bottom=1.5in, % Bottom margin
+	left=0.85in, % Left margin
+	right=0.85in, % Right margin
+}
+
+\usepackage{lmodern}
+\usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
+
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+
+\titleformat{\subsection}{
+  \vspace{-4pt}\bf\raggedright
+}{}{0em}{}[\color{black} \vspace{-3pt}]
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=0em,before=\item[]}
+
+\begin{document}
+
+\centerline{\Large\bfseries $name$}
+
+\vspace{0.5em}
+
+\centerline{\href{mailto: $email$}{$email$} {\large\textperiodcentered} \href{$website$}{$website$} {\large\textperiodcentered} \href{tel:$phone$}{$phone$} \ {\Large}}
+
+$body$
+
+\end{document}
